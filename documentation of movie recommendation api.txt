@@ -1,0 +1,132 @@
+1. Introduction
+
+The Movie Recommendation Application is a full-stack web application designed to help users discover movies, receive personalized recommendations, manage favorite movies, track viewing history, submit reviews and ratings, and maintain personal profiles.
+
+The application uses:
+
+FastAPI for backend development
+React.js for frontend development
+SQLite for database management
+JWT Authentication for secure user access
+
+2. Objectives
+
+The main objectives of the application are:
+
+Allow users to register and login securely.
+Search for movies using an external movie database API.
+Generate movie recommendations.
+Save favorite movies.
+Track movie viewing history.
+Allow users to review and rate movies.
+Provide profile management functionality.
+Display dashboard analytics.
+
+3. System Architecture
+Frontend
+
+Technologies:
+
+React.js
+Vite
+Axios
+React Router DOM
+
+Responsibilities:
+
+User Interface
+API Communication
+Authentication Handling
+Display Recommendations
+Review and Rating Forms
+Backend
+
+Technologies:
+
+FastAPI
+SQLAlchemy
+Pydantic
+JWT Authentication
+
+Responsibilities:
+
+User Authentication
+Movie Search
+Recommendation Logic
+Favorites Management
+Review Management
+Profile Management
+Dashboard Statistics
+Database
+
+Technology:
+
+SQLite
+
+Stores:
+
+User Information
+Favorites
+Reviews
+Viewing History
+User Preferences
+
+4. Authentication Module
+Purpose
+
+Provides secure user registration and login functionality.
+
+Features
+User Registration
+User Login
+JWT Token Generation
+Protected API Routes
+Endpoints
+Register
+POST /auth/register
+Login
+POST /auth/login
+Notes
+Passwords are securely hashed before storing.
+JWT tokens are used for authentication.
+Only authenticated users can access protected routes.
+
+5. Movie Search Module
+Purpose
+
+Allows users to search movies using keywords.
+
+Endpoint
+GET /movies/search
+Parameters
+Parameter	Description
+query	Movie name
+Notes
+Search results are fetched from TMDB API.
+Users can search unlimited movies.
+
+6. Recommendation Module
+Purpose
+
+Provides personalized movie recommendations.
+
+Endpoint
+GET /recommendations
+Features
+Genre-based recommendations
+User preference recommendations
+Trending movie recommendations
+Notes
+Recommendations improve based on user activity.
+Viewing history and favorites can influence recommendations.
+
+
+Conclusion
+
+The Movie Recommendation Application successfully provides a complete movie discovery platform with secure authentication, personalized recommendations, favorite management, viewing history tracking, reviews and ratings, and user profile management. The application demonstrates full-stack development using FastAPI, React.js, SQLAlchemy, and SQLite while following modern API development practices and secure authentication mechanisms.
+
+
+
+
+
+7. Favorites Management Module
